@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+  - name: Install tmux
+    yum:
+      name: tmux
+      state: present
