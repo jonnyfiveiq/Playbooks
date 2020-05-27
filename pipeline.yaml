@@ -8,5 +8,5 @@
 
   tasks:
    - name: index.html copy
-     template: src=index.html.j2 dest=/var/www/html/index.html
+     template: src=/home/centos/index.html.j2 dest=/var/www/html/index.html
      become: yes
