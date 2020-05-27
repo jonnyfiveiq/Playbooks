@@ -1,6 +1,6 @@
 ---
 
-- hosts: local
+- hosts: localhost
 
   vars: 
    - MyMessage: "{{line1}}"
