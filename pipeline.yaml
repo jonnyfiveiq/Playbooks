@@ -3,8 +3,8 @@
 - hosts: mywebservers
 
   vars: 
-   - MyMessage: {{ line1 }}
-   - DBMessage: {{ line2 }}
+   - MyMessage: {{line1}}
+   - DBMessage: {{line2}}
 
   tasks:
    - name: index.html copy
