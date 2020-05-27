@@ -1,6 +1,6 @@
 ---
 
-- hosts:
+- hosts: 3.136.156.32
 
   vars: 
    - MyMessage: "{{line1}}"
