@@ -1,0 +1,52 @@
+---
+
+- hosts: rhv
+  gather_facts: no
+
+  vars: 
+    ovirt_host: "rhvh.home.bob"
+    ovirt_user: "admin@internal"
+    ovirt_password: "Smartvm!23"
+
+  tasks:
+
+
+  - name: Login to Ovirt
+    ovirt_auth:
+      url: https://rhvh.home.bob/ovirt-engine/api
+      username: "{{ ovirt_user }}"
+      password: "{{ ovirt_password }}"
+      insecure: yes
+    delegate_to: "{{ ovirt_host }}"
+    run_once: true
+
+  - name: Creates a new Virtual Machine from template'
+    ovirt_vm:
+      auth: "{{ ovirt_auth }}"
+      name: "{{ name }}"
+      state: running
+      template: CentOS8-Template
+      cluster: Default
+      memory: "{{ memory }}"
+      memory_guaranteed: "{{ minmemory }}"
+      high_availability: false
+      operating_system: rhel_8x64
+      serial_console: true
+#      nics:
+ #       interface: ovirtmgmt
+      cloud_init:
+        nic_boot_protocol: static
+        nic_ip_address: "{{ ipaddr }}"
+        nic_netmask: "{{ netmask }}"
+        nic_gateway: 
+        nic_name: enp1s0
+        nic_on_boot: true
+        host_name: "{{ hostname }}"
+        custom_script: |
+          write_files:
+           - content: |
+               Built from Automation Services Catalog
+             path: /tmp/greeting.txt
+             permissions: '0644'
+        user_name: "{{ username }}"
+        root_password: "{{ password }}"
