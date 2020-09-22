@@ -3,9 +3,7 @@
   collections:
    - ansible.tower
 
-
- tasks:
-
+  tasks:
   - name: Create a new organization
     tower_organization:
       name: "TestORG"
