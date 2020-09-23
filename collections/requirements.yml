@@ -1,3 +1,4 @@
 collections:
     - name: ansible.tower
     - name: cisco.nxos
+    - name: jonnyfiveiq.test_collection
