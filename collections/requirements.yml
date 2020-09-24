@@ -3,3 +3,5 @@ collections:
     - name: cisco.nxos
     - name: awx.awx
     - name: jonnyfiveiq.test_collection
+    - name: amazon.aws
+    - name: google.cloud
