@@ -5,4 +5,3 @@ collections:
     - name: jonnyfiveiq.test_collection
     - name: amazon.aws
     - name: google.cloud
-    - name: myfirst.test_collection
