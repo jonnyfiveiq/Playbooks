@@ -6,3 +6,4 @@ collections:
     - name: amazon.aws
     - name: google.cloud
     - name: myfirst.test_collection
+    - name: newswangerd.collection_demo
