@@ -11,6 +11,6 @@
       instance: dev88235
       state: present
       data:
-        short_description: "BEFORE --- The product was ordered by {{ username }}"
+        short_description: "BEFORE --- The product was ordered by {{username}}"
         severity: 3
         priority: 2
