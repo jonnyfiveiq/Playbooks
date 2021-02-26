@@ -5,6 +5,8 @@
 
   tasks:
   - debug: msg="Debug message {{username}}"
+  - debug: msg="Debug message memory {{cpu}}"
+  - debug: msg="Debug message cpu {{memory}}"
   - name: Create an incident
     servicenow.servicenow.snow_record:
       username: admin
