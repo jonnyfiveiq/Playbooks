@@ -4,9 +4,6 @@
   gather_facts: no
 
   tasks:
-  - debug: msg="Debug message {{username}}"
-  - debug: msg="Debug message memory {{cpu}}"
-  - debug: msg="Debug message cpu {{memory}}"
   - name: Create an incident
     servicenow.servicenow.snow_record:
       username: admin
@@ -14,6 +11,6 @@
       instance: dev76820
       state: present
       data:
-        short_description: "BEFORE --- The product was ordered by {{username}}"
+        short_description: "Order ID : {{orderid}} --- {{prodcutname}} was ordered by {{username}}<{{useremail}}> on {{orderedat}}. CPU's = {{cpu}} | Memory = {{memory}} on Platform {{productplatform}}"
         severity: 3
         priority: 2
