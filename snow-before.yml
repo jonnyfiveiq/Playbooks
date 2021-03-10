@@ -10,8 +10,8 @@
   - name: Create an incident
     servicenow.servicenow.snow_record:
       username: admin
-      password: 1XuxGI8fHVss
-      instance: dev88235
+      password: llDpE4MZ6thQ
+      instance: dev76820
       state: present
       data:
         short_description: "BEFORE --- The product was ordered by {{username}}"
