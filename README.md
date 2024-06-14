@@ -1,2 +1,2 @@
-# ASC_Prod_Demo
-Ansible Service Catalog Production Demo Playbooks
+# Playbooks for Demos
+My little stash of stuff for testing
