@@ -1,0 +1,9 @@
+---
+- name: Gather facts for inventory correlation
+  hosts: all
+  connection: local
+  gather_facts: true
+  tasks:
+    - name: Display BIOS UUID
+      debug:
+        msg: "BIOS UUID: {{ ansible_product_uuid | default('not found') }}"
